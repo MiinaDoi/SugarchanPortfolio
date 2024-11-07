@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Header from "../components/header";
 import Hero from "../components/hero";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
         <meta name="description" content="A portfolio showcasing my work." />
       </Head>
       <div className="relative min-h-screen bg-white">
-        <Header />
         <Hero />
       </div>
     </>
