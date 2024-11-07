@@ -2,10 +2,16 @@
 import Image from "next/image";
 
 const artworks = [
-  { src: "/images/creature1.png", title: "Creatures#1 Angel" },
-  { src: "/images/creature2.png", title: "Creatures#2 Discord" },
-  { src: "/images/creature3.png", title: "Creatures#3 School" },
-  { src: "/images/creature4.png", title: "Creatures#4 Unknown" },
+  { src: "/images/Creatures/Creatures1.JPEG", title: "Creatures#1 Angel" },
+  { src: "/images/Creatures/Creatures2.JPEG", title: "Creatures#2 Discord" },
+  { src: "/images/Creatures/Creatures3.JPEG", title: "Creatures#3 School" },
+  { src: "/images/Creatures/Creatures4.JPEG", title: "Creatures#4 Rabbit" },
+  { src: "/images/Creatures/Creatures5.JPEG", title: "Creatures#5 Sandwich" },
+  { src: "/images/Creatures/Creatures6.JPEG", title: "Creatures#6 Bath" },
+  { src: "/images/Creatures/Creatures7.JPEG", title: "Creatures#7 Chocolate" },
+  { src: "/images/Creatures/Creatures8.JPEG", title: "Creatures#8 Gender" },
+  { src: "/images/Creatures/Creatures9.JPG", title: "Creatures#9 Sexuality" },
+  { src: "/images/Creatures/Creatures10.JPEG", title: "Creatures#10 Doll" },
 ];
 
 const Works = () => {
