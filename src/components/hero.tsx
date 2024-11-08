@@ -1,11 +1,9 @@
-"use client"; // Add this line at the top
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
 
-const images = [
-  "/images/hero-image.png", // Replace with your image paths
-];
+const images = ["/images/hero-image.png", "/images/Creatures/Creatures1.JPEG"];
 
 const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,18 +26,20 @@ const Hero: React.FC = () => {
       >
         &lt;
       </button>
-      <div className="text-center">
+
+      <div className="relative w-full h-full">
         <Image
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          width={800}
-          height={600}
-          className="object-cover opacity-70"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-70"
         />
         <h1 className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-70">
           SUGAR
         </h1>
       </div>
+
       <button
         className="absolute right-4 text-2xl text-white z-10"
         onClick={handleNext}

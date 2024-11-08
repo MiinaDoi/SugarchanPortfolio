@@ -26,7 +26,7 @@ const About = () => {
             working in January 2022. My characteristics of the artwork are
             symbolic, surreal, cometic, and yet, sometimes could be sarcastic. I
             try to integrate my feeling and intuition about today's society to
-            communicate with the audience. I hope you enjoy my artwork :)
+            communicate with the audience. I hope you enjoy my artwork!
           </p>
           <h3 className="text-2xl font-semibold mt-8 mb-4">
             Awards & Exhibitions
