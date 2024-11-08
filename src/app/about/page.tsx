@@ -28,20 +28,20 @@ const About = () => {
             try to integrate my feeling and intuition about today's society to
             communicate with the audience. I hope you enjoy my artwork!
           </p>
+          <h3 className="text-2xl font-semibold mt-8 mb-4">Total Volume</h3>
+          <p className="text-lg border-l-2 border-gray-300 pl-4 mb-8">
+            0.273 ETH
+          </p>
           <h3 className="text-2xl font-semibold mt-8 mb-4">
             Awards & Exhibitions
           </h3>
-          <p className="text-lg border-l-2 border-gray-300 pl-4 mb-8">
-            Coming soon...
-          </p>
-          <h3 className="text-2xl font-semibold mt-8 mb-4">Selected Press</h3>
           <p className="text-lg border-l-2 border-gray-300 pl-4">
             Coming soon...
           </p>
         </div>
       </div>
       <footer className="mt-16 text-center text-gray-500">
-        © Sugarchan 2022
+        © Sugarchan 2024
       </footer>
     </div>
   );

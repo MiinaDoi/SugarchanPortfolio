@@ -2,22 +2,52 @@ import React from "react";
 
 const newsItems = [
   {
-    date: "November 6, 2024",
-    title: "New Artwork Released",
+    date: "May 27, 2023",
+    title: "Starting Custom PFP Requests",
     description:
-      "I just released a new piece in the Creatures series, titled 'Angel.' Check it out in the Works section!",
+      "I am starting to take requests for custom PFPs (profile pictures).",
   },
   {
-    date: "October 25, 2024",
-    title: "Exhibition Announcement",
+    date: "May 2, 2023",
+    title: "Creatures#6 Bath was sold",
     description:
-      "Excited to announce my upcoming exhibition in Tokyo. More details coming soon!",
+      "Creatures#6 Bath was sold on OpenSea at the price of 0.05 ETH",
   },
   {
-    date: "September 15, 2024",
-    title: "Interview with Sugarchan",
+    date: "May 2, 2023",
+    title: "Creatures#3 School was sold",
     description:
-      "I had an interview with Art Weekly where I discussed my creative process. Read it on their website!",
+      "Creatures#3 School was sold on OpenSea at the price of 0.05 ETH",
+  },
+  {
+    date: "May 2, 2023",
+    title: "Creatures#2 Discord was sold",
+    description:
+      "Creatures#2 Discord was sold on OpenSea at the price of 0.05 ETH",
+  },
+  {
+    date: "April 15, 2023",
+    title: "Creatures#5 Sandwich was sold",
+    description:
+      "Creatures#5 Sandwich was sold on OpenSea at the price of 0.05 ETH",
+  },
+  {
+    date: "February 20, 2023",
+    title: "List VerySilentFruits Collection on OpenSea",
+    description:
+      "I listed the second NFT collection, VerySilentFruits, on OpenSea. This collection consists of a total of 50 pieces.",
+  },
+  {
+    date: "November 19, 2022",
+    title: "Creatures1# Angel was sold",
+    description:
+      "Creatures1# Angel was sold on OpenSea at the price of 0.003 ETH",
+  },
+  {
+    date: "June 10, 2022",
+    title: "List The Creatures Cllection on OpenSea",
+    description:
+      "I listed the first NFT collection, The Creatures, on OpenSea. The Creatures consists of a total of 10 pieces.",
   },
 ];
 
