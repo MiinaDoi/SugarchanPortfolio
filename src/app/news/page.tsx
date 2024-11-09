@@ -53,9 +53,9 @@ const newsItems = [
 
 const News = () => {
   return (
-    <div className="min-h-screen bg-white text-black px-8 py-12">
+    <div className="min-h-screen bg-white text-black px-8 py-12 pt-24">
       <header className="text-center">
-        <h1 className="text-5xl font-bold mb-12">NEWS</h1>
+        <h1 className="text-5xl font-bold mb-12 title-font">NEWS</h1>
       </header>
       <div className="max-w-3xl mx-auto space-y-8">
         {newsItems.map((item, index) => (

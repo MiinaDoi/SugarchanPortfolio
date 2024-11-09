@@ -35,8 +35,12 @@ const Hero: React.FC = () => {
           objectFit="cover"
           className="opacity-70"
         />
-        <h1 className="absolute inset-0 flex items-center justify-center text-8xl font-bold text-white opacity-70">
-          SUGAR
+        <h1 className="absolute inset-0 flex items-center justify-center text-[20rem] font-bold text-white opacity-70 title-font text-shadow">
+          {["S", "U", "G", "A", "R"].map((letter, index) => (
+            <span key={index} className={`fade-in-letter delay-${index}`}>
+              {letter}
+            </span>
+          ))}
         </h1>
       </div>
 

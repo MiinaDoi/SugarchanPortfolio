@@ -16,14 +16,14 @@ const artworks = [
 
 const Works = () => {
   return (
-    <div className="min-h-screen bg-white text-black">
-      <header className="flex justify-center p-6">
-        <h1 className="text-4xl font-bold">WORKS</h1>
+    <div className="min-h-screen bg-white text-black pt-24 px-10">
+      <header className="flex justify-center">
+        <h1 className="text-5xl font-bold mb-12 title-font">WORKS</h1>
       </header>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 md:px-16 py-10">
         {artworks.map((art, index) => (
-          <div key={index} className="text-center">
+          <div key={index} className="text-left">
             <Image
               src={art.src}
               alt={art.title}
@@ -31,7 +31,7 @@ const Works = () => {
               height={300}
               className="rounded-lg shadow-lg object-cover"
             />
-            <p className="mt-4 text-lg font-medium">{art.title}</p>
+            <p className="mt-2 text-lg font-light title-font">{art.title}</p>
           </div>
         ))}
       </div>

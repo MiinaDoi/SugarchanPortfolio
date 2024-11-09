@@ -3,9 +3,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white text-black px-8 py-12">
+    <div className="min-h-screen bg-white text-black px-8 py-12 pt-24">
       <header className="text-center">
-        <h1 className="text-5xl font-bold mb-12">ABOUT</h1>
+        <h1 className="text-5xl font-bold mb-12 title-font">ABOUT</h1>
       </header>
       <div className="flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Image Section */}
@@ -20,20 +20,22 @@ const About = () => {
         </div>
         {/* Text Section */}
         <div className="max-w-lg">
-          <h2 className="text-3xl font-bold mb-4">Sugarchan</h2>
+          <h2 className="text-3xl font-bold mb-4 title-font">Sugarchan</h2>
           <p className="text-lg mb-8 leading-relaxed border-l-2 border-gray-300 pl-4">
-            Hi, I am Sugarchan, known as a contemporary artist. I have started
-            working in January 2022. My characteristics of the artwork are
-            symbolic, surreal, cometic, and yet, sometimes could be sarcastic. I
-            try to integrate my feeling and intuition about today's society to
-            communicate with the audience. I hope you enjoy my artwork!
+            A contemporary artist based in Tokyo, Japan. I began my journey in
+            January 2022. My artwork is symbolic, surreal, cometic, and
+            occasionally sarcastic. Through my pieces, I aim to convey my
+            feelings and intuitions about today’s society, inviting you to
+            engage and reflect. I hope you enjoy experiencing my work.
           </p>
-          <h3 className="text-2xl font-semibold mt-8 mb-4">Total Volume</h3>
+          <h3 className="text-2xl font-semibold mt-8 mb-4 title-font">
+            Total Volume
+          </h3>
           <p className="text-lg border-l-2 border-gray-300 pl-4 mb-8">
             0.273 ETH
           </p>
-          <h3 className="text-2xl font-semibold mt-8 mb-4">
-            Awards & Exhibitions
+          <h3 className="text-2xl font-semibold mt-8 mb-4 title-font">
+            Exhibitions
           </h3>
           <p className="text-lg border-l-2 border-gray-300 pl-4">
             Coming soon...
