@@ -57,7 +57,7 @@ const News = () => {
       <header className="text-center">
         <h1 className="text-5xl font-bold mb-12 title-font">NEWS</h1>
       </header>
-      <div className="max-w-3xl mx-auto space-y-8">
+      <div className="max-w-3xl mx-auto space-y-8 animate-fade-in">
         {newsItems.map((item, index) => (
           <div key={index} className="border-b pb-4">
             <p className="text-gray-500 text-sm">{item.date}</p>

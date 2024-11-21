@@ -21,7 +21,7 @@ const Works = () => {
         <h1 className="text-5xl font-bold mb-12 title-font">WORKS</h1>
       </header>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 md:px-16 py-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 md:px-16 py-10 animate-fade-in">
         {artworks.map((art, index) => (
           <div key={index} className="text-left">
             <Image

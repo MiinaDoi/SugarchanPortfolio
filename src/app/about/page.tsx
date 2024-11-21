@@ -7,7 +7,7 @@ const About = () => {
       <header className="text-center">
         <h1 className="text-5xl font-bold mb-12 title-font">ABOUT</h1>
       </header>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 animate-fade-in">
         {/* Image Section */}
         <div className="flex-shrink-0">
           <Image
@@ -25,8 +25,8 @@ const About = () => {
             A contemporary artist based in Tokyo, Japan. I began my journey in
             January 2022. My artwork is symbolic, surreal, cometic, and
             occasionally sarcastic. Through my pieces, I aim to convey my
-            feelings and intuitions about today’s society, inviting you to
-            engage and reflect. I hope you enjoy experiencing my work.
+            feelings and intuitions about society today, inviting you to engage
+            and reflect. I hope you enjoy experiencing my work.
           </p>
           <h3 className="text-2xl font-semibold mt-8 mb-4 title-font">
             Total Volume
@@ -42,9 +42,6 @@ const About = () => {
           </p>
         </div>
       </div>
-      <footer className="mt-16 text-center text-gray-500">
-        © Sugarchan 2024
-      </footer>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-gray-900">
       <button
-        className="absolute left-4 text-2xl text-white z-10"
+        className="absolute left-4 text-2xl text-white z-10 hover:scale-150 hover:bg-gray-300 hover:text-gray-100 transition-transform duration-300 rounded-full p-2"
         onClick={handlePrevious}
       >
         &lt;
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
       </div>
 
       <button
-        className="absolute right-4 text-2xl text-white z-10"
+        className="absolute right-4 text-2xl text-white z-10 hover:scale-150 hover:bg-gray-300 hover:text-gray-100 transition-transform duration-300 rounded-full p-2"
         onClick={handleNext}
       >
         &gt;

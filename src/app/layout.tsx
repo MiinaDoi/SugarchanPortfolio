@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
+import ConditionalFooter from "@/components/ConditionalFooter";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Header />
         {children}
         <SocialMediaIcons />
+        <ConditionalFooter />
       </body>
     </html>
   );
