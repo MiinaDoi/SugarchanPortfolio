@@ -1,20 +1,59 @@
-// src/app/works/page.tsx
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-const artworks = [
-  { src: "/images/Creatures/Creatures1.JPEG", title: "Creatures#1 Angel" },
-  { src: "/images/Creatures/Creatures2.JPEG", title: "Creatures#2 Discord" },
-  { src: "/images/Creatures/Creatures3.JPEG", title: "Creatures#3 School" },
-  { src: "/images/Creatures/Creatures4.JPEG", title: "Creatures#4 Rabbit" },
-  { src: "/images/Creatures/Creatures5.JPEG", title: "Creatures#5 Sandwich" },
-  { src: "/images/Creatures/Creatures6.JPEG", title: "Creatures#6 Bath" },
-  { src: "/images/Creatures/Creatures7.JPEG", title: "Creatures#7 Chocolate" },
-  { src: "/images/Creatures/Creatures8.JPEG", title: "Creatures#8 Gender" },
-  { src: "/images/Creatures/Creatures9.JPG", title: "Creatures#9 Sexuality" },
-  { src: "/images/Creatures/Creatures10.JPEG", title: "Creatures#10 Doll" },
-];
+type Artwork = {
+  imageUrl: string;
+  title: string;
+};
 
 const Works = () => {
+  const [artworks, setArtworks] = useState<Artwork[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchArtworks = async () => {
+      try {
+        const options = {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            "x-api-key": process.env.NEXT_PUBLIC_OPENSEA_API_KEY || "",
+          },
+        };
+
+        // Corrected API URL
+        const response = await fetch(
+          "https://api.opensea.io/api/v1/assets?collection_slug=msi1201-collection&limit=20",
+          options
+        );
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data && data.assets && Array.isArray(data.assets)) {
+          const fetchedArtworks = data.assets.map((asset: any) => ({
+            imageUrl: asset.image_url || "/placeholder.png", // Fallback image
+            title: asset.name || "Untitled",
+          }));
+          setArtworks(fetchedArtworks);
+        } else {
+          console.error("Invalid response structure:", data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch artworks:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchArtworks();
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-black pt-24 px-10">
       <header className="flex justify-center">
@@ -22,18 +61,28 @@ const Works = () => {
       </header>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 md:px-16 py-10 animate-fade-in">
-        {artworks.map((art, index) => (
-          <div key={index} className="text-left">
-            <Image
-              src={art.src}
-              alt={art.title}
-              width={300}
-              height={300}
-              className="rounded-lg shadow-lg object-cover"
-            />
-            <p className="mt-2 text-lg font-light title-font">{art.title}</p>
-          </div>
-        ))}
+        {loading ? (
+          <p className="col-span-full text-center text-lg">
+            Loading artworks...
+          </p>
+        ) : artworks.length > 0 ? (
+          artworks.map((art, index) => (
+            <div key={index} className="text-left">
+              <Image
+                src={art.imageUrl}
+                alt={art.title}
+                width={300}
+                height={300}
+                className="rounded-lg shadow-lg object-cover"
+              />
+              <p className="mt-2 text-lg font-light title-font">{art.title}</p>
+            </div>
+          ))
+        ) : (
+          <p className="col-span-full text-center text-lg">
+            No artworks found for this collection.
+          </p>
+        )}
       </div>
     </div>
   );
