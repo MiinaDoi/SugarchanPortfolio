@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const images = ["/images/hero-image.png", "/images/Creatures/Creatures1.JPEG"];
+const images = ["/images/hero-image.png", "/images/hero-image2.JPEG"];
 
 const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
