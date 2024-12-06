@@ -53,6 +53,14 @@ a {
   text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Customize shadow position, blur, and color */
 }
 
+.link-color {
+  color: #D1D5DB;
+}
+
+.link-color:hover {
+  color: #565CB9; /* Replace with your desired hover color */
+}
+
 @keyframes fade-in-from-bottom {
   0% {
     opacity: 0;

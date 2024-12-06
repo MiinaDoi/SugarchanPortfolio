@@ -79,7 +79,7 @@ const GetCollection = () => {
                 href={collection.opensea_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline mt-2 inline-block"
+                className="link-color hover:underline mt-2 inline-block"
               >
                 View on OpenSea
               </a>

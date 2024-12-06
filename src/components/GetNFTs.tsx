@@ -61,7 +61,7 @@ const GetNFTs = () => {
 
   return (
     <section>
-      <h2 className="text-3xl font-bold mb-4 title-font ml-16">NFTs</h2>
+      <h2 className="text-3xl font-bold mb-4 title-font ml-16 mt-10">NFTs</h2>
       {loading ? (
         <p className="text-center text-lg">Loading NFTs...</p>
       ) : nfts.length > 0 ? (
@@ -80,7 +80,7 @@ const GetNFTs = () => {
                 href={nft.opensea_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline mt-2 inline-block"
+                className="link-color hover:underline mt-2 inline-block"
               >
                 View on OpenSea
               </a>
