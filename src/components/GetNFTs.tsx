@@ -61,11 +61,13 @@ const GetNFTs = () => {
 
   return (
     <section>
-      <h2 className="text-3xl font-bold mb-4 title-font ml-16 mt-10">NFTs</h2>
+      <h2 className="text-3xl font-bold mb-4 title-font ml-8 sm:ml-16 mt-10">
+        NFTs
+      </h2>
       {loading ? (
         <p className="text-center text-lg">Loading NFTs...</p>
       ) : nfts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-8 md:px-16 py-10 animate-fade-in">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-8 px-10 md:px-16 py-10">
           {nfts.map((nft) => (
             <div key={nft.identifier} className="text-left">
               <Image
@@ -75,15 +77,16 @@ const GetNFTs = () => {
                 height={300}
                 className="rounded-lg shadow-lg object-cover"
               />
-              <h3 className="mt-2 text-xl font-bold title-font">{nft.name}</h3>
-              <a
-                href={nft.opensea_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-color hover:underline mt-2 inline-block"
-              >
-                View on OpenSea
-              </a>
+              <h3 className="mt-2 text-xl font-bold title-font">
+                <a
+                  href={nft.opensea_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-color"
+                >
+                  {nft.name}
+                </a>
+              </h3>
             </div>
           ))}
         </div>

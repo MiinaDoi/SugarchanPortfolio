@@ -53,16 +53,20 @@ const newsItems = [
 
 const News = () => {
   return (
-    <div className="min-h-screen bg-white text-black px-8 py-12 pt-24">
+    <div className="min-h-screen bg-white text-black px-4 sm:px-8 py-12 pt-24">
       <header className="text-center">
-        <h1 className="text-5xl font-bold mb-12 title-font">NEWS</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-8 sm:mb-12 title-font">
+          NEWS
+        </h1>
       </header>
-      <div className="max-w-3xl mx-auto space-y-8 animate-fade-in">
+      <div className="max-w-lg sm:max-w-3xl mx-auto space-y-6 sm:space-y-8 animate-fade-in">
         {newsItems.map((item, index) => (
           <div key={index} className="border-b pb-4">
-            <p className="text-gray-500 text-sm">{item.date}</p>
-            <h2 className="text-2xl font-semibold mt-2">{item.title}</h2>
-            <p className="text-lg mt-2">{item.description}</p>
+            <p className="text-gray-500 text-xs sm:text-sm">{item.date}</p>
+            <h2 className="text-xl sm:text-2xl font-semibold mt-2">
+              {item.title}
+            </h2>
+            <p className="text-base sm:text-lg mt-2">{item.description}</p>
           </div>
         ))}
       </div>
