@@ -31,7 +31,9 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         {children}
-        <SocialMediaIcons />
+        <div className="hidden md:block">
+          <SocialMediaIcons />
+        </div>
         <ConditionalFooter />
       </body>
     </html>
