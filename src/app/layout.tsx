@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Header from "@/components/header";
+import ConditionalFooter from "@/components/ConditionalFooter";
+import SocialMediaIcons from "@/components/SocialMediaIcons";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -26,7 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Header />
         {children}
+        <div className="hidden md:block">
+          <SocialMediaIcons />
+        </div>
+        <ConditionalFooter />
       </body>
     </html>
   );
